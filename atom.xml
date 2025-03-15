@@ -6,7 +6,7 @@
   <link href="https://nuclearslippers.github.io/atom.xml" rel="self"/>
   
   <link href="https://nuclearslippers.github.io/"/>
-  <updated>2025-03-12T15:29:22.768Z</updated>
+  <updated>2025-03-15T02:36:40.078Z</updated>
   <id>https://nuclearslippers.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>paper</title>
+    <title>一些学习思路</title>
     <link href="https://nuclearslippers.github.io/paper/"/>
     <id>https://nuclearslippers.github.io/paper/</id>
     <published>2025-03-11T12:50:06.000Z</published>
-    <updated>2025-03-12T15:29:22.768Z</updated>
+    <updated>2025-03-15T02:36:40.078Z</updated>
     
-    <content type="html"><![CDATA[<p>本文主要记录一些科研思路。非常感谢B站上的资料，让自己收益匪浅。之前总觉得一片茫然，听了之后还算是有了一定的目标和方向。<a href="https://www.bilibili.com/video/BV1Dg4y1m7F5?spm_id_from=333.788.videopod.episodes&amp;vd_source=07739525bb0db436069e43c124976911&amp;p=2">科研思路</a></p><h2 id="center-我要做什么？"><center> 我要做什么？</h2><p>这个问题一直困扰着我很久，总觉得这种方法会被淘汰，那种方法又有缺陷。自己的工作就缓慢推动。<br>那么不妨从另一个角度思考。首先，我们是要做AI相关，甚至可以说就是MOT方面的。人工智能方法最最重要的东西就是数据，因此问题来了，你有什么数据？<br>回答：没有自己的数据，只能用公开数据集。目前来说就是KITTI用的比较多了，Nusences还需要进一步学习，Waymo更是遥不可及。</p><ol><li>公开数据集<br>要做公开数据集，有利有弊。难度大，出文章难，但是一旦出文章大概率是好文章。</li><li>自己的数据集<br>如果组内已经有数据集了，那么毕业论文就问题不大了，发水一点的论文是没有问题的。</li><li>搜集数据集，自己标注<br>如果此时没有明确的研究方向，而且只想水毕业。可以这样做，找越偏越好的方向（检测，分割最水），圆一个好一点的理由。<br>但是对于这一方向，我还有自己的一些看法。自己其实可以录一个数据集，而且有一定的价值：基于BEV的无人机追踪数据集。<br>总结：当下自己要做的还是针对公开数据集KITTI做相关工作，后续可以补充Nusences</li></ol><h2 id="center-创新点从哪来-非正确科研"><center> 创新点从哪来（非正确科研）</h2><p>从简单来说，首先不要动大框架。因为需要自己手动实现，工作量很大。但是我有这个想法要做，因此需要多学习openmmlab的使用。<br>其次，加模块和改模块是最简单的。这里注意说提出新的模块，画好图（复杂，美观）即可。</p><h2 id="center-怎么做实验"><center> 怎么做实验</h2><ol><li><p>找基础模型<br>（1） 跑模型的原代码，一定要看效果怎么样<br>（2） debug理解源码<br>（3） 找相关领域的一些论文<br>（4） 把别人的模块拿过来用一下<br>（5） 没有源码=这个论文没用</p></li><li><p>消融实验（验证小模块）<br>（1）不一定都有效的<br>（2）尽可能找离谱的模块<br>（3）如果只有小模块，尽量有3-4个</p></li><li><p>对比实验<br>对比比自己差的就行</p></li></ol><h2 id="center-工具"><center> 工具</h2><p>CV：openmmlab<br>NLP: huggingface</p>]]></content>
+    <content type="html"><![CDATA[<p>写在前面，该文目的性很强，主要针对毕业任务，而非钻研科研，不过融汇百家思想的精华总是好多。非常感谢B站上的资料，让自己收益匪浅。之前总觉得一片茫然，听了之后还算是有了一定的目标和方向。<a href="https://www.bilibili.com/video/BV1Dg4y1m7F5?spm_id_from=333.788.videopod.episodes&amp;vd_source=07739525bb0db436069e43c124976911&amp;p=2">科研思路</a></p><h2 id="center-我要做什么？"><center> 我要做什么？</h2><p>这个问题一直困扰着我很久，总觉得这种方法会被淘汰，那种方法又有缺陷。自己的工作就缓慢推动。<br>那么不妨从另一个角度思考。首先，我们是要做AI相关，甚至可以说就是MOT方面的。人工智能方法最最重要的东西就是数据，因此问题来了，你有什么数据？<br>回答：没有自己的数据，只能用公开数据集。目前来说就是KITTI用的比较多了，Nusences还需要进一步学习，Waymo更是遥不可及。</p><ol><li>公开数据集<br>要做公开数据集，有利有弊。难度大，出文章难，但是一旦出文章大概率是好文章。</li><li>自己的数据集<br>如果组内已经有数据集了，那么毕业论文就问题不大了。</li><li>搜集数据集，自己标注<br>如果此时没有明确的研究方向，而且只想水毕业。可以这样做，找越偏越好的方向（检测，分割最水），圆一个好一点的理由。<br>但是对于这一方向，我还有自己的一些看法。自己其实可以录一个数据集，而且有一定的价值：基于BEV的无人机追踪数据集。<br>总结：当下自己要做的还是针对公开数据集KITTI做相关工作，后续可以补充Nusences</li></ol><h2 id="center-创新点从哪来-非正确科研"><center> 创新点从哪来（非正确科研）</h2><p>从简单来说，首先不要动大框架。因为需要自己手动实现，工作量很大。但是我有这个想法要做，因此需要多学习openmmlab的使用。<br>其次，加模块和改模块是最简单的。这里注意说提出新的模块，画好图（复杂，美观）即可。</p><h2 id="center-怎么做实验"><center> 怎么做实验</h2><ol><li><p>找基础模型<br>（1） 跑模型的原代码，一定要看效果怎么样<br>（2） debug理解源码<br>（3） 找相关领域的一些论文<br>（4） 把别人的模块拿过来用一下<br>（5） 没有源码=这个论文没用</p></li><li><p>消融实验（验证小模块）<br>（1）不一定都有效的<br>（2）尽可能找离谱的模块<br>（3）如果只有小模块，尽量有3-4个</p></li><li><p>对比实验<br>对比比自己差的就行</p></li></ol><h2 id="center-工具"><center> 工具</h2><p>CV：openmmlab<br>NLP: huggingface</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;本文主要记录一些科研思路。非常感谢B站上的资料，让自己收益匪浅。之前总觉得一片茫然，听了之后还算是有了一定的目标和方向。&lt;a href=&quot;https://www.bilibili.com/video/BV1Dg4y1m7F5?spm_id_from=333.788.vide</summary>
+    <summary type="html">&lt;p&gt;写在前面，该文目的性很强，主要针对毕业任务，而非钻研科研，不过融汇百家思想的精华总是好多。非常感谢B站上的资料，让自己收益匪浅。之前总觉得一片茫然，听了之后还算是有了一定的目标和方向。&lt;a href=&quot;https://www.bilibili.com/video/BV1Dg</summary>
       
     
     
@@ -37,11 +37,11 @@
   </entry>
   
   <entry>
-    <title>mamba</title>
+    <title>mamba模块的简单原理</title>
     <link href="https://nuclearslippers.github.io/mamba/"/>
     <id>https://nuclearslippers.github.io/mamba/</id>
     <published>2025-03-09T08:28:19.000Z</published>
-    <updated>2025-03-09T09:11:26.225Z</updated>
+    <updated>2025-03-15T02:36:57.394Z</updated>
     
     <content type="html"><![CDATA[<p>本文记录Mamba模型的学习。<a href="https://blog.csdn.net/weixin_44162361/article/details/144591024">参考资料</a></p><h2 id="center-提出的目的"><center> 提出的目的</h2><p>新的模型的出现，必然是为了解决过去模型的不足。</p><ol><li>Transformer在预测工作时，需要计算之前所有tokens的自注意力矩阵，这个工作的计算量时相当大的。也就是说预测时速度很慢，但是由于Transformer可以并行计算，所以训练非常快。</li><li>RNN 推理快，但是训练慢（不能并行计算），而且记忆时间不长。<br>那么我们就想有一种模型，训练也快推理也快。还有一定的记忆时长。</li></ol><h2 id="center-由简入深"><center> 由简入深</h2><ol><li><p>状态空间模型</p></li><li><p>离散化：零阶保持器</p></li><li><p>循环表示<br>循环表示用来推理</p></li><li><p>卷积表示<br>卷积表示用来训练</p></li><li><p>结构化状态空间模型(S4)<br>引入HiPPO（Hungering Hungry Hippo），用来使得A保持大容量记忆。</p></li><li><p>其它改进<br>有选择地保留信息(Selectively Retain Information)<br>扫描操作(The Scan Operation)<br>硬件感知算法(Hardware-aware Algorithm)</p></li></ol>]]></content>
     
@@ -102,11 +102,11 @@
   </entry>
   
   <entry>
-    <title>MOT</title>
+    <title>MOT任务的主要流程</title>
     <link href="https://nuclearslippers.github.io/MOT/"/>
     <id>https://nuclearslippers.github.io/MOT/</id>
     <published>2025-03-04T06:21:59.000Z</published>
-    <updated>2025-03-04T08:35:59.412Z</updated>
+    <updated>2025-03-15T02:37:18.399Z</updated>
     
     <content type="html"><![CDATA[<p>主要记录MOT任务的大致流程，包括检测，追踪，评价，可视化中的一些细节</p><h2 id="center-评价"><center> 评价</h2><p>对于MOT任务，业界一般采用<a href="https://github.com/JonathonLuiten/TrackEval">Trackeval</a>来进行计算。本节以测试MOT17的结果为例，简要介绍一下其使用细节。</p><ol><li>选择要评价的数据集<br>常见的公开数据集都以Trackeval作为自己的官方评价工具，提供一个主函数文件。<a href="https://github.com/JonathonLuiten/TrackEval/blob/master/docs/MOTChallenge-Official/Readme.md">MOT17</a>也是如此，我们在Trackeval库中可以找到<code>run_mot_challenge.py</code>文件。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python scripts/run_mot_challenge.py --BENCHMARK MOT17 --SPLIT_TO_EVAL train --TRACKERS_TO_EVAL MPNTrack --METRICS HOTA CLEAR Identity VACE --USE_PARALLEL False --NUM_PARALLEL_CORES 1  </span><br></pre></td></tr></table></figure><ol start="2"><li>前期准备<br>(1) gt数据准备<br>准备真值，注意格式要符合要求<br>(2) sequences file准备<br>这是备注需要测试的段名</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">TrackEval/data/gt/mot_challenge</span><br><span class="line">|——MOT17</span><br><span class="line">    |—— &lt;SeqName01&gt;</span><br><span class="line">        |—— gt</span><br><span class="line">            |—— gt.txt</span><br><span class="line">        |—— seqinfo.ini</span><br><span class="line">    |—— &lt;SeqName02&gt;</span><br><span class="line">        |—— ...</span><br><span class="line">    |—— &lt;SeqName03&gt;</span><br><span class="line">        |—— ...</span><br><span class="line">|——seqmaps</span><br><span class="line">    |——MOT17.txt</span><br></pre></td></tr></table></figure><p>(3) 追踪结果准备</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">TrackEval/data/gt/trackers/mot_challenge</span><br><span class="line">|——MOT17</span><br><span class="line">    |—— &lt;TrackerName01&gt;</span><br><span class="line">        |—— data</span><br><span class="line">            |—— &lt;SeqName01&gt;.txt</span><br><span class="line">            |—— &lt;SeqName02&gt;.txt</span><br><span class="line">            |—— &lt;SeqName03&gt;.txt</span><br><span class="line">            |—— ...</span><br><span class="line">    |—— &lt;TrackerName02&gt;</span><br><span class="line">        |—— data</span><br></pre></td></tr></table></figure>]]></content>
     
